@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.chewiewins.goalweight",
+      "sha256_cert_fingerprints": ["89:A5:66:8B:01:A9:EA:12:DE:6C:68:A2:D9:77:F6:D0:27:0D:91:04:AF:E4:A6:9E:F9:DC:6B:49:D5:E8:93:FC"]
+    }
+  }
+]
