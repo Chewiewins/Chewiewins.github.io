@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" id="themeColor" content="#111827">
+<title>ChewieWins – Health is Wealth</title>
+<meta name="description" content="Simple, free health tools and notes from @ChewieWins: a free Goal Weight Calculator and plain-language notes on nutrition, exercise, and stress.">
+<meta property="og:title" content="ChewieWins – Health is Wealth">
+<meta property="og:description" content="Simple, free tools and notes. Free Goal Weight Calculator, plus plain-language notes on nutrition, exercise, and stress.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chewiewins.github.io/">
+<link rel="icon" type="image/png" href="https://chewiewins.github.io/goal-weight-calculator/icon-192.png">
+<link rel="apple-touch-icon" href="https://chewiewins.github.io/goal-weight-calculator/apple-touch-icon.png">
+<script>
+(function(){var p='dark';try{p=localStorage.getItem('theme')||'dark';}catch(e){}
+var d=p==='dark'||(p==='auto'&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches);
+document.documentElement.classList.toggle('dark',d);})();
+</script>
+<style>
+:root{--blue:#007BFF;--cyan:#22d3ee;--bg1:#f1f5f9;--bg2:#fff;--card:#fff;--panel:#f1f5f9;--text:#1e293b;--muted:#64748b;--border:#e2e8f0}
+html.dark{--bg1:#111827;--bg2:#000;--card:#1f2937;--panel:#111827;--text:#e2e8f0;--muted:#cbd5e1;--border:#374151}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Google Sans Text','Google Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.55;color:var(--text);background:linear-gradient(135deg,var(--bg1),var(--bg2));background-attachment:fixed;min-height:100vh;padding:16px}
+a{color:var(--blue)}html.dark a{color:#60a5fa}
+.top{max-width:768px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+.brand{font-weight:700;color:var(--text);text-decoration:none;font-size:15px}
+.tseg{display:flex;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:3px}
+.tseg button{border:0;background:transparent;color:var(--text);padding:6px 13px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit}
+.tseg button.on{background:var(--blue);color:#fff}
+main{max-width:768px;margin:16px auto}
+.card{background:var(--card);border-radius:14px;box-shadow:0 25px 50px -12px rgba(0,0,0,.35);padding:22px;margin-bottom:18px;border:1px solid var(--border)}
+.grad{background:linear-gradient(90deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{text-align:center;padding:36px 22px}
+.hero h1{font-size:2.4rem;line-height:1.15;margin:0 0 10px;font-weight:800}
+.hero p{color:var(--muted);font-size:1.1rem;margin:0 auto 22px;max-width:30em}
+.kicker{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:4px 12px;margin-bottom:14px}
+h2{font-size:1.4rem;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:15px;min-height:48px}
+.btn.primary{background:linear-gradient(90deg,var(--cyan),var(--blue));color:#fff!important;box-shadow:0 8px 20px -8px rgba(0,123,255,.6)}
+.btn.ghost{background:var(--panel);color:var(--text)!important;border:1px solid var(--border)}
+.btn.block{width:100%}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
+.row .btn{padding:11px 8px;font-size:14px}
+.pillars{display:grid;gap:12px}
+.pillar{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;gap:14px;align-items:flex-start}
+.ico{flex:0 0 44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;background:linear-gradient(135deg,var(--cyan),var(--blue))}
+.pillar h3{margin:0 0 4px;font-size:1.05rem}
+.pillar p{margin:0;color:var(--muted);font-size:15px}
+.support{display:grid;gap:10px}
+.note{color:var(--muted);font-size:14px;text-align:center;margin:10px 0 0}
+.disc{font-size:13px;color:var(--muted);border-left:3px solid var(--blue);padding:10px 12px;background:var(--panel);border-radius:8px;margin:0}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:8px 0 24px}
+footer a{font-weight:700}
+@media(min-width:640px){.pillars{grid-template-columns:repeat(3,1fr)}.pillar{flex-direction:column}.support{grid-template-columns:1fr 1fr}.hero h1{font-size:3rem}}
+</style>
+</head>
+<body>
+<div class="top">
+  <a class="brand" href="./">Chewie<span class="grad">Wins</span></a>
+  <div class="tseg" role="group" aria-label="Theme">
+    <button type="button" data-t="light">Light</button>
+    <button type="button" data-t="dark">Dark</button>
+    <button type="button" data-t="auto">Auto</button>
+  </div>
+</div>
+<main>
+  <section class="card hero">
+    <span class="kicker">Simple · Free · Practical</span>
+    <h1 class="grad">Health is Wealth</h1>
+    <p>Simple, free tools and notes. No gimmicks, no sign-ups, just the basics that work when you do them consistently.</p>
+    <a class="btn primary" href="https://chewiewins.github.io/goal-weight-calculator/">Open the free calculator →</a>
+  </section>
+
+  <section class="card" id="calculator">
+    <h2>Free Goal Weight Calculator</h2>
+    <p class="lead">Pick your goal weight and a deficit you can live with, and see your daily calories and a realistic target date. Works on your phone, installs like an app, and nothing you enter leaves your device.</p>
+    <a class="btn primary block" href="https://chewiewins.github.io/goal-weight-calculator/">Open the calculator</a>
+    <div class="row">
+      <a class="btn ghost" href="https://chewiewins.github.io/goal-weight-calculator/advanced.html">Advanced</a>
+      <a class="btn ghost" href="https://chewiewins.github.io/goal-weight-calculator/guide.html">Guide</a>
+      <a class="btn ghost" href="https://chewiewins.github.io/goal-weight-calculator/poster.png">Poster</a>
+    </div>
+  </section>
+
+  <section class="card" id="pillars">
+    <h2>Three pillars</h2>
+    <p class="lead">Keep it simple. These three do most of the work.</p>
+    <div class="pillars">
+      <div class="pillar"><div class="ico" aria-hidden="true">🥗</div><div><h3>Nutrition</h3><p>Calories in vs out decides weight. Get enough protein (about 1.6 g per kg), plenty of fibre, more unsaturated fats and less saturated fat, sugar and salt.</p></div></div>
+      <div class="pillar"><div class="ico" aria-hidden="true">💪</div><div><h3>Exercise</h3><p>Move every day and lift something a few times a week. Strength keeps muscle while you lose fat; walking adds steady calorie burn.</p></div></div>
+      <div class="pillar"><div class="ico" aria-hidden="true">🧘</div><div><h3>Stress &amp; Psychology</h3><p>Sleep enough, keep stress down, and be consistent. A small deficit you can stick to beats a big one you quit.</p></div></div>
+    </div>
+  </section>
+
+  <section class="card" id="read">
+    <h2>Notes &amp; support</h2>
+    <p class="lead">Longer, plain-language notes on what I have learned, and a place to say thanks if the tools help.</p>
+    <div class="support">
+      <a class="btn primary" href="https://chewie324114.substack.com/">Read on Substack</a>
+      <a class="btn ghost" href="https://ko-fi.com/chewiewins">☕ Tip on Ko-fi</a>
+    </div>
+    <p class="note">Free to use, tips optional.</p>
+    <div style="margin-top:12px"><a class="btn ghost block" href="https://x.com/ChewieWins">Follow @ChewieWins on X</a></div>
+  </section>
+
+  <p class="disc"><strong>Not medical advice.</strong> These tools and notes are general information only. Talk to your doctor or a qualified professional before making big changes to your diet or exercise, especially if you have a health condition.</p>
+</main>
+<footer>Made by <a href="https://x.com/ChewieWins">@ChewieWins</a></footer>
+<script>
+var themePref='dark';try{themePref=localStorage.getItem('theme')||'dark';}catch(e){}
+var mq=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):null;
+function applyTheme(){var d=themePref==='dark'||(themePref==='auto'&&mq&&mq.matches);
+document.documentElement.classList.toggle('dark',d);
+document.getElementById('themeColor').setAttribute('content',d?'#111827':'#f1f5f9');
+document.querySelectorAll('.tseg button').forEach(function(b){b.classList.toggle('on',b.dataset.t===themePref);b.setAttribute('aria-pressed',b.dataset.t===themePref);});}
+function setTheme(t){themePref=(t==='light'||t==='dark')?t:'auto';try{localStorage.setItem('theme',themePref);}catch(e){}applyTheme();}
+document.querySelectorAll('.tseg button').forEach(function(b){b.addEventListener('click',function(){setTheme(b.dataset.t);});});
+if(mq){(mq.addEventListener?mq.addEventListener('change',applyTheme):mq.addListener(applyTheme));}
+applyTheme();
+</script>
+</body>
+</html>
