@@ -19,7 +19,9 @@
       "namespace": "android_app",
       "package_name": "chewie_calories_calculator.myapp",
       "sha256_cert_fingerprints": [
-        "89:A5:66:8B:01:A9:EA:12:DE:6C:68:A2:D9:77:F6:D0:27:0D:91:04:AF:E4:A6:9E:F9:DC:6B:49:D5:E8:93:FC"
+        "89:A5:66:8B:01:A9:EA:12:DE:6C:68:A2:D9:77:F6:D0:27:0D:91:04:AF:E4:A6:9E:F9:DC:6B:49:D5:E8:93:FC",
+        "F1:4B:9B:17:E8:51:69:6F:77:F3:46:99:8B:B6:CC:F8:E4:89:E8:93:20:EA:26:0F:78:57:D0:78:FD:51:E4:4A",
+        "52:D7:0D:2E:6C:4F:9C:A0:A5:3A:91:EA:53:80:35:65:6C:67:EA:46:AE:81:0D:26:62:A5:38:20:99:1E:E8:3F"
       ]
     }
   }
